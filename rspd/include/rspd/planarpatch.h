@@ -40,7 +40,6 @@ struct RotatedRect
         this->basis = newBasis;
         this->bottomLeft = min;
         this->topRight = max;
-        this->R_12 = R_12;
     }
 
 };
