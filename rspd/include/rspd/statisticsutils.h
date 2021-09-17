@@ -7,6 +7,8 @@
 
 #include <Eigen/Core>
 
+namespace rspd {
+
 class StatisticsUtils
 {
 public:
@@ -100,5 +102,7 @@ private:
     size_t mSize;
 
 };
+
+}
 
 #endif // STATISTICSUTILS_H

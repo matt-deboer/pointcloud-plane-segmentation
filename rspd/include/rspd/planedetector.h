@@ -6,6 +6,8 @@
 
 #include <open3d/Open3D.h>
 
+namespace rspd {
+
 class PlaneDetector
 {
 public:
@@ -81,5 +83,7 @@ private:
     bool isFalsePositive(PlanarPatch *patch);
 
 };
+
+}
 
 #endif // PLANEDETECTOR_H

@@ -12,6 +12,8 @@
 
 #include <open3d/Open3D.h>
 
+namespace rspd {
+
 struct RotatedRect
 {
     Eigen::Matrix3Xd matrix;
@@ -218,4 +220,5 @@ public:
 
 };
 
+}
 #endif // PLANEDETECTORPATCH_H

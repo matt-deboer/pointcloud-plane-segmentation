@@ -3,6 +3,8 @@
 
 #include <vector>
 
+namespace rspd {
+
 class UnionFind
 {
 public:
@@ -57,4 +59,5 @@ private:
 
 };
 
+}
 #endif // UNIONFIND_H

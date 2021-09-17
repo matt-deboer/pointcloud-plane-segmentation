@@ -8,6 +8,8 @@
 
 #include <open3d/Open3D.h>
 
+namespace rspd {
+
 class BVH3d
 {
 public:
@@ -239,5 +241,5 @@ private:
     }
 
 };
-
+}
 #endif // BVH3d_H

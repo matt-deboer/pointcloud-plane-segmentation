@@ -3,6 +3,8 @@
 
 #include "geometryutils.h"
 
+namespace rspd {
+
 class Plane
 {
 public:
@@ -94,6 +96,7 @@ private:
 
 };
 
+}
 //template class Plane<float>;
 //template class Plane<double>;
 

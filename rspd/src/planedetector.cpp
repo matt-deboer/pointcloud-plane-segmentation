@@ -22,10 +22,13 @@
 
 #include <open3d/Open3D.h>
 
+
 inline static double deg2rad(double deg)
 {
     return static_cast<double>(deg * M_PI / 180);
 }
+
+namespace rspd {
 
 PlaneDetector::PlaneDetector(const PointCloudConstPtr& pointCloud, std::vector<std::vector<int>>& neighbors, size_t minNumPoints)
     : mPointCloud(pointCloud)
@@ -388,4 +391,6 @@ bool PlaneDetector::isFalsePositive(PlanarPatch *patch)
 {
     return patch->numUpdates() == 0 ||
             patch->getSize() / mMaxSize < 0.01f;
+}
+
 }

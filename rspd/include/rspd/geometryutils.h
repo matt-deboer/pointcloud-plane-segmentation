@@ -5,6 +5,8 @@
 
 #include <Eigen/Dense>
 
+namespace rspd {
+
 class GeometryUtils
 {
 public:
@@ -105,5 +107,5 @@ private:
     }
 
 };
-
+}
 #endif // GEOMETRYUTILS_H

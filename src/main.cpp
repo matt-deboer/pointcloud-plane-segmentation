@@ -103,8 +103,8 @@ int main(int argc, char *argv[]) {
     std::cout << "o3d cloud: top right: " << tr.transpose() << std::endl;
 
     t1 = std::chrono::high_resolution_clock::now();
-    PlaneDetector rspd(cloud_ptr, neighbors);
-    std::set<Plane*> planes = rspd.detect();
+    rspd::PlaneDetector detector(cloud_ptr, neighbors);
+    std::set<rspd::Plane*> planes = detector.detect();
     const double t_rspd = std::chrono::duration_cast<std::chrono::duration<double>>(std::chrono::high_resolution_clock::now() - t1).count();
     std::cout << "rspd detect: " << t_rspd << " seconds" << std::endl;
     std::cout << std::endl;

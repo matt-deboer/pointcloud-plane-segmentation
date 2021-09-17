@@ -2,6 +2,8 @@
 
 #include <iostream>
 
+namespace rspd {
+
 PlanarPatch::PlanarPatch(const PointCloudConstPtr& pointCloud, StatisticsUtils *statistics,
                          const std::vector<size_t> &points, double minAllowedNormal,
                          double maxAllowedDist, double outlierRatio)
@@ -162,4 +164,6 @@ void PlanarPatch::removeOutliers()
         return mOutliers[point];
     }), mPoints.end());
     mOutliers.clear();
+}
+
 }
