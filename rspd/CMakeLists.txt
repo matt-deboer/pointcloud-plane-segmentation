@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.1)
 project(rspd)
 
-if (BUILD_SHARED_LIBS ON)
+if (BUILD_SHARED_LIBS)
   add_library(rspd SHARED src/planedetector.cpp src/planarpatch.cpp)
 else()
   add_library(rspd STATIC src/planedetector.cpp src/planarpatch.cpp)

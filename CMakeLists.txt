@@ -6,7 +6,6 @@ set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_BUILD_TYPE RelWithDebInfo)
 # set(CMAKE_BUILD_TYPE Debug)
 
-option(BUILD_SHARED_LIBS "Build as a shared library." ON)
 option(BUILD_EXECUTABLE "Build the rspd executable." ON)
 
 # If you haven't installed Open3D system-wide, you will need to set the
