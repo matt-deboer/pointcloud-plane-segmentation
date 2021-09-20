@@ -1,7 +1,12 @@
 cmake_minimum_required(VERSION 3.1)
 project(rspd)
 
-add_library(rspd SHARED src/planedetector.cpp src/planarpatch.cpp)
+if (BUILD_SHARED_LIBS ON)
+  add_library(rspd SHARED src/planedetector.cpp src/planarpatch.cpp)
+else()
+  add_library(rspd STATIC src/planedetector.cpp src/planarpatch.cpp)
+endif()
+
 target_link_libraries(rspd PUBLIC Open3D::Open3D)
 target_include_directories(rspd PUBLIC
   $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>)

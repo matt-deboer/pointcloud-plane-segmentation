@@ -6,6 +6,8 @@ set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_BUILD_TYPE RelWithDebInfo)
 # set(CMAKE_BUILD_TYPE Debug)
 
+option(BUILD_SHARED_LIBS "Build as a shared library." ON)
+option(BUILD_EXECUTABLE "Build the rspd executable." ON)
 
 # If you haven't installed Open3D system-wide, you will need to set the
 # CMAKE_PREFIX_PATH=<install_dir>, e.g.,
@@ -18,7 +20,7 @@ get_target_property(LIBB_INCLUDES rspd INCLUDE_DIRECTORIES)
 message(STATUS "rspd includes: ${LIBB_INCLUDES}")
 
 # Open3D
-if (Open3D_FOUND)
+if (Open3D_FOUND AND BUILD_EXECUTABLE)
     message(STATUS "Found Open3D ${Open3D_VERSION} at ${Open3D_CONFIG}")
     add_executable(main src/main.cpp)
     target_link_libraries(main PRIVATE Open3D::Open3D rspd)
